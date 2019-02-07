@@ -14,7 +14,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 include_directories(${INCLUDE_DIR} ./mod/lml/include ./mod/lml/extlib/include ./mod/lml/mod/lml_edk/include ./mod/lml/mod/lml_edk/mod/lml_le/include ./mod/lml/mod/lml_edk/mod/lml_le/mod/lml_pae/include)
 file(GLOB_RECURSE SOURCE_LIST ${SOURCE_DIR}/*.cpp)
 
-add_library(${PROJECT_NAME} STATIC ${SOURCE_LIST})
+add_executable(${PROJECT_NAME} ${SOURCE_LIST})
 
 add_subdirectory(./mod/lml)
 target_link_libraries(${PROJECT_NAME} LearnML_Core)
